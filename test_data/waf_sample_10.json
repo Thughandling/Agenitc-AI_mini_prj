@@ -1,0 +1,142 @@
+[
+  {
+    "label": "benign",
+    "http_raw": "POST /api/signup HTTP/1.1\nHost: greenfield-crafts.co.uk\nContent-Type: application/json\nAccept: application/json\nOrigin: https://greenfield-crafts.co.uk\nX-Requested-With: XMLHttpRequest\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:113.0) Gecko/20100101 Firefox/113.0\nContent-Length: 144\nConnection: keep-alive\n\n{\"user\":{\"username\":\"tomas.wilkes\",\"email\":\"tomas.wilkes@greenfield-crafts.co.uk\",\"password\":\"Craft2024!\",\"preferences\":{\"newsletter\":false,\"notifications\":true}}}",
+    "log": {
+      "source": "ai-waf-dataset",
+      "http_method": "POST",
+      "uri": "/api/signup",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:113.0) Gecko/20100101 Firefox/113.0",
+      "host": "greenfield-crafts.co.uk",
+      "client_ip": "198.51.100.1",
+      "action": "ALLOW",
+      "message": "POST /api/signup HTTP/1.1\nHost: greenfield-crafts.co.uk\nContent-Type: application/json\nAccept: application/json\nOrigin: https://greenfield-crafts.co.uk\nX-Requested-With: XMLHttpRequest\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:113.0) Gecko/20100101 Firefox/113.0\nContent-Length: 144\nConnection: keep-alive\n\n{\"user\":{\"username\":\"tomas.wilkes\",\"email\":\"tomas.wilkes@greenfield-crafts.co.uk\",\"password\":\"Craft2024!\",\"preferences\":{\"newsletter\":false,\"notifications\":true}}}"
+    }
+  },
+  {
+    "label": "benign",
+    "http_raw": "POST /session/destroy HTTP/1.1\nHost: api.cloud-data-services.ai\nConnection: close\nContent-Type: application/x-www-form-urlencoded\nReferer: https://api.cloud-data-services.ai/user/profile\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15\nCookie: auth_session=3fa84814c7b270c5ff881490\nAccept-Encoding: gzip, deflate, br\nAccept: text/html\nContent-Length: 38\n\ncsrf_token=21b0e29f5a57bd79c94f027c68ab0f4a",
+    "log": {
+      "source": "ai-waf-dataset",
+      "http_method": "POST",
+      "uri": "/session/destroy",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15",
+      "host": "api.cloud-data-services.ai",
+      "client_ip": "198.51.100.1",
+      "action": "ALLOW",
+      "message": "POST /session/destroy HTTP/1.1\nHost: api.cloud-data-services.ai\nConnection: close\nContent-Type: application/x-www-form-urlencoded\nReferer: https://api.cloud-data-services.ai/user/profile\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15\nCookie: auth_session=3fa84814c7b270c5ff881490\nAccept-Encoding: gzip, deflate, br\nAccept: text/html\nContent-Length: 38\n\ncsrf_token=21b0e29f5a57bd79c94f027c68ab0f4a"
+    }
+  },
+  {
+    "label": "benign",
+    "http_raw": "GET /favicon.ico HTTP/1.1\nHost: creative-coding-workshop.io\nConnection: keep-alive\nAccept: image/vnd.microsoft.icon,image/x-icon,image/png,image/*,*/*;q=0.8\nUser-Agent: Mozilla/5.0 (Linux; Android 13; SM-G990B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Mobile Safari/537.36\nAccept-Language: en-US,en;q=0.5",
+    "log": {
+      "source": "ai-waf-dataset",
+      "http_method": "GET",
+      "uri": "/favicon.ico",
+      "user_agent": "Mozilla/5.0 (Linux; Android 13; SM-G990B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Mobile Safari/537.36",
+      "host": "creative-coding-workshop.io",
+      "client_ip": "198.51.100.1",
+      "action": "ALLOW",
+      "message": "GET /favicon.ico HTTP/1.1\nHost: creative-coding-workshop.io\nConnection: keep-alive\nAccept: image/vnd.microsoft.icon,image/x-icon,image/png,image/*,*/*;q=0.8\nUser-Agent: Mozilla/5.0 (Linux; Android 13; SM-G990B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Mobile Safari/537.36\nAccept-Language: en-US,en;q=0.5"
+    }
+  },
+  {
+    "label": "benign",
+    "http_raw": "GET /media/search?search=SELECT%20best%20option%20FROM%20list HTTP/1.1\nHost: digital-archive-cloud.tv\nAccept: */*\nAccept-Language: en-US,en;q=0.8\nUser-Agent: Mozilla/5.0 (compatible; Bingbot/2.0; +http://www.bing.com/bingbot.htm)\nConnection: close",
+    "log": {
+      "source": "ai-waf-dataset",
+      "http_method": "GET",
+      "uri": "/media/search?search=SELECT%20best%20option%20FROM%20list",
+      "user_agent": "Mozilla/5.0 (compatible; Bingbot/2.0; +http://www.bing.com/bingbot.htm)",
+      "host": "digital-archive-cloud.tv",
+      "client_ip": "198.51.100.1",
+      "action": "ALLOW",
+      "message": "GET /media/search?search=SELECT%20best%20option%20FROM%20list HTTP/1.1\nHost: digital-archive-cloud.tv\nAccept: */*\nAccept-Language: en-US,en;q=0.8\nUser-Agent: Mozilla/5.0 (compatible; Bingbot/2.0; +http://www.bing.com/bingbot.htm)\nConnection: close"
+    }
+  },
+  {
+    "label": "benign",
+    "http_raw": "OPTIONS /v1/analytics/report/generate HTTP/1.1\nHost: analytics.bigdata-hub.cloud\nOrigin: https://portal.analytics-hub.net\nAccess-Control-Request-Method: POST\nAccess-Control-Request-Headers: content-type, authorization\nUser-Agent: Googlebot/2.1 (+http://www.google.com/bot.html)\nAccept: */*\nConnection: close",
+    "log": {
+      "source": "ai-waf-dataset",
+      "http_method": "OPTIONS",
+      "uri": "/v1/analytics/report/generate",
+      "user_agent": "Googlebot/2.1 (+http://www.google.com/bot.html)",
+      "host": "analytics.bigdata-hub.cloud",
+      "client_ip": "198.51.100.1",
+      "action": "ALLOW",
+      "message": "OPTIONS /v1/analytics/report/generate HTTP/1.1\nHost: analytics.bigdata-hub.cloud\nOrigin: https://portal.analytics-hub.net\nAccess-Control-Request-Method: POST\nAccess-Control-Request-Headers: content-type, authorization\nUser-Agent: Googlebot/2.1 (+http://www.google.com/bot.html)\nAccept: */*\nConnection: close"
+    }
+  },
+  {
+    "label": "malicious",
+    "http_raw": "POST /signin HTTP/1.1\nHost: urban-healthcare-services.org\nContent-Type: application/x-www-form-urlencoded\nContent-Length: 118\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\nAccept-Language: en-US,en;q=0.9\nAccept-Encoding: gzip, deflate\nCache-Control: max-age=0\nReferer: https://urban-healthcare-services.org/signin\nConnection: keep-alive\n\nuser=patient' and substring(//users/user[1]/concat(substring(password,1,1),substring(password,5,1)),2,1)='9'&pass=password123",
+    "log": {
+      "source": "ai-waf-dataset",
+      "http_method": "POST",
+      "uri": "/signin",
+      "user_agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
+      "host": "urban-healthcare-services.org",
+      "client_ip": "198.51.100.1",
+      "action": "BLOCK",
+      "message": "POST /signin HTTP/1.1\nHost: urban-healthcare-services.org\nContent-Type: application/x-www-form-urlencoded\nContent-Length: 118\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\nAccept-Language: en-US,en;q=0.9\nAccept-Encoding: gzip, deflate\nCache-Control: max-age=0\nReferer: https://urban-healthcare-services.org/signin\nConnection: keep-alive"
+    }
+  },
+  {
+    "label": "malicious",
+    "http_raw": "POST /api/v1/ldap/query HTTP/1.1\nHost: ldap-query-center.org\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Safari/605.1.15\nContent-Type: application/x-www-form-urlencoded\nAccept-Encoding: gzip, deflate, br\nAccept-Language: en-US,en;q=0.9\nOrigin: https://ldap-query-center.org\nContent-Length: 53\nConnection: close\n\nuser_id=validuser%29%28objectClass%3D*%29%26attributes%3D*",
+    "log": {
+      "source": "ai-waf-dataset",
+      "http_method": "POST",
+      "uri": "/api/v1/ldap/query",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Safari/605.1.15",
+      "host": "ldap-query-center.org",
+      "client_ip": "198.51.100.1",
+      "action": "BLOCK",
+      "message": "POST /api/v1/ldap/query HTTP/1.1\nHost: ldap-query-center.org\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Safari/605.1.15\nContent-Type: application/x-www-form-urlencoded\nAccept-Encoding: gzip, deflate, br\nAccept-Language: en-US,en;q=0.9\nOrigin: https://ldap-query-center.org\nContent-Length: 53\nConnection: close\n\nuser_id=validuser%29%28objectClass%3D*%29%26attributes%3D*"
+    }
+  },
+  {
+    "label": "malicious",
+    "http_raw": "GET /track?event=login_attempt&user=guest%0d%0a127.0.0.1%20-%20root%20[10/Oct/2023:13:55:36%20-0700]%20\"POST%20/admin/login%20HTTP/1.1\"%20200%20789 HTTP/1.1\nHost: realtime.analytics-data-hub.ai\nUser-Agent: Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36\nAccept: application/json, text/javascript, */*; q=0.01\nAccept-Language: en-US,en;q=0.5\nConnection: keep-alive",
+    "log": {
+      "source": "ai-waf-dataset",
+      "http_method": "GET",
+      "uri": "/track?event=login_attempt&user=guest%0d%0a127.0.0.1%20-%20root%20[10/Oct/2023:13:55:36%20-0700]%20\"POST%20/admin/login%20HTTP/1.1\"%20200%20789",
+      "user_agent": "Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36",
+      "host": "realtime.analytics-data-hub.ai",
+      "client_ip": "198.51.100.1",
+      "action": "BLOCK",
+      "message": "GET /track?event=login_attempt&user=guest%0d%0a127.0.0.1%20-%20root%20[10/Oct/2023:13:55:36%20-0700]%20\"POST%20/admin/login%20HTTP/1.1\"%20200%20789 HTTP/1.1\nHost: realtime.analytics-data-hub.ai\nUser-Agent: Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36\nAccept: application/json, text/javascript, */*; q=0.01\nAccept-Language: en-US,en;q=0.5\nConnection: keep-alive"
+    }
+  },
+  {
+    "label": "malicious",
+    "http_raw": "PUT /api/v4/notifications/config HTTP/1.1\nHost: my-personal-blog-site.info\nContent-Type: application/json\nAccept-Charset: utf-8, iso-8859-1;q=0.5\nUser-Agent: Python-urllib/3.9\nCache-Control: max-age=0\nContent-Length: 290\n\n{\"email_alerts\":false,\"push_alerts\":true,\"custom_greeting\":\"Hello ${'user'.toUpperCase()} ${''.getClass().forName('java.lang.Runtime').getMethod('getRuntime',null).invoke(null,null).exec('cat /etc/passwd').getInputStream().readAllBytes()?new('java.lang.String',_)}!\"}",
+    "log": {
+      "source": "ai-waf-dataset",
+      "http_method": "PUT",
+      "uri": "/api/v4/notifications/config",
+      "user_agent": "Python-urllib/3.9",
+      "host": "my-personal-blog-site.info",
+      "client_ip": "198.51.100.1",
+      "action": "BLOCK",
+      "message": "PUT /api/v4/notifications/config HTTP/1.1\nHost: my-personal-blog-site.info\nContent-Type: application/json\nAccept-Charset: utf-8, iso-8859-1;q=0.5\nUser-Agent: Python-urllib/3.9\nCache-Control: max-age=0\nContent-Length: 290\n\n{\"email_alerts\":false,\"push_alerts\":true,\"custom_greeting\":\"Hello ${'user'.toUpperCase()} ${''.getClass().forName('java.lang.Runtime').getMethod('getRuntime',null).invoke(null,null).exec('cat /etc/passwd').getInputStream().readAllBytes()?new('java.lang.String',_)}!\"}"
+    }
+  },
+  {
+    "label": "malicious",
+    "http_raw": "POST /update/profile HTTP/1.1\nHost: online-retail-store.biz\nUser-Agent: Wget/1.21.1\nAccept: */*\nContent-Type: application/x-www-form-urlencoded\nCookie: session_filter=(uid=customer%00; last_visit=20240605\nContent-Length: 33\n\nfirst_name=John&last_name=Doe",
+    "log": {
+      "source": "ai-waf-dataset",
+      "http_method": "POST",
+      "uri": "/update/profile",
+      "user_agent": "Wget/1.21.1",
+      "host": "online-retail-store.biz",
+      "client_ip": "198.51.100.1",
+      "action": "BLOCK",
+      "message": "POST /update/profile HTTP/1.1\nHost: online-retail-store.biz\nUser-Agent: Wget/1.21.1\nAccept: */*\nContent-Type: application/x-www-form-urlencoded\nCookie: session_filter=(uid=customer%00; last_visit=20240605\nContent-Length: 33\n\nfirst_name=John&last_name=Doe"
+    }
+  }
+]

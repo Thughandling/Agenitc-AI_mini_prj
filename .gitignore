@@ -1,0 +1,29 @@
+# OS / editor
+.DS_Store
+.ipynb_checkpoints/
+.idea/
+.vscode/
+*.swp
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.env.local
+
+# Large dataset (use scripts/download_dataset.py)
+test_data/ai_waf_dataset_full.json
+
+# Internal planning docs
+*.xlsx
+
+# Temp / cache
+.tmp.*
+docs/.mpl_cache/
+
+# Secrets
+*.pem
+credentials.json

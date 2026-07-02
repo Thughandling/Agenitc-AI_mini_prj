@@ -70,26 +70,43 @@ flowchart TD
 
 ```
 AI-secops/
-├── AI_SecOps.ipynb          # Colab용 메인 노트북 (LangGraph 전체)
+├── AI_SecOps.ipynb              # Colab용 메인 노트북
 ├── README.md
+├── LICENSE
+├── requirements.txt
+├── .env.example                 # API 키 템플릿 (커밋 X: .env)
 ├── docs/
-│   ├── AI_SecOps_Flowchart.pdf      # Node/State/Function 플로우차트
+│   ├── AI_SecOps_Flowchart.pdf  # Node/State/Function 플로우차트
 │   ├── AI_SecOps_Flowchart.png
 │   └── generate_flowchart.py
+├── scripts/
+│   └── download_dataset.py      # HF 데이터셋 다운로드
 └── test_data/
-    ├── secops_core.py       # 파이프라인 코어 (노트북·테스트 공용)
-    ├── run_validation.py    # 배치 검증 (100 → 10 샘플)
-    ├── ai_waf_dataset_full.json
-    ├── waf_sample_10.json
+    ├── secops_core.py           # 파이프라인 코어
+    ├── run_validation.py        # 배치 검증 (100 → 10)
+    ├── run_batch_test.py        # 10건 샘플 정확도 테스트
+    ├── waf_sample_10.json       # 샘플 10건 (repo 포함)
     └── TEST_REPORT.md
 ```
+
+> `ai_waf_dataset_full.json` (~5MB)은 `.gitignore` 처리. 필요 시 `python scripts/download_dataset.py` 로 받으세요.
 
 ## 빠른 시작
 
 ### 1. 의존성
 
 ```bash
-pip install langgraph langchain langchain-openai langchain-google-genai pydantic json5 json-repair
+pip install -r requirements.txt
+```
+
+Colab 노트북은 상단 pip 셀을 실행해도 됩니다.
+
+### 1-1. (선택) 전체 WAF 데이터셋
+
+```bash
+pip install datasets
+python scripts/download_dataset.py
+# → test_data/ai_waf_dataset_full.json
 ```
 
 ### 2. Mock 모드 (API 키 없이 파이프라인 검증)
@@ -131,7 +148,7 @@ export GOOGLE_API_KEY=your_key   # gemini
 # export OPENAI_API_KEY=your_key  # openai
 ```
 
-Colab에서는 `AI_SecOps.ipynb` 환경 설정 셀에서 `LLM_PROVIDER`를 선택하고, API 키는 **Colab Secrets** 또는 환경 변수로 주입하세요. 키를 코드/노트북에 하드코딩하지 마세요.
+Colab에서는 `AI_SecOps.ipynb` 환경 설정 셀에서 `LLM_PROVIDER`를 선택하고, API 키는 **Colab Secrets** (`GOOGLE_API_KEY` / `OPENAI_API_KEY`) 또는 로컬 `getpass`로 주입하세요. `.env.example` 참고.
 
 ### 5. 노트북 (Colab)
 
@@ -186,7 +203,7 @@ Blue Team은 오탐·정상 트래픽 가능성을 제시했으나 ...
 
 ## 라이선스
 
-MIT (예정 — 배포 시 명시)
+MIT — see [LICENSE](LICENSE)
 
 ## 참고
 
